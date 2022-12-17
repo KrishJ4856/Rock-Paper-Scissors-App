@@ -1,0 +1,16 @@
+{
+  "name": "rock-paper-scissor-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "npx tailwindcss -i ./css/input.css -o ./css/output.css",
+    "watch:css": "npx tailwindcss -i ./css/input.css -o ./css/output.css --watch"
+  },
+  "author": "=",
+  "license": "MIT",
+  "dependencies": {
+    "daisyui": "^2.45.0",
+    "tailwindcss": "^3.2.4"
+  }
+}
