@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cyberpunk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="./css/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+    <script defer src="./code/index.js"></script>
+</head>
+<body class="p-0 m-0 w-screen h-screen bg-blue-900 text-white font-sans flex flex-col justify-center items-center">
+
+
+    <div id="rules" class="z-[999] h-[60vh] w-[40vw] bg-white hidden flex-col rounded-md absolute top-[30vh]">
+        <div id="rulesTop" class="h-[10vh] p-5 w-full flex flex-row items-center justify-between">
+            <div id="rulesTopTitle" class=" font-bold p-5 text-2xl text-blue-800 tracking-widest">RULES</div>
+            <div id="rulesTopClose" class="p-5 hover:cursor-pointer"><img src="./rock-paper-scissors-master/images/icon-close.svg" alt="X"></div>
+        </div>
+        <div id="rulesImgModal" class="h-[40vh] w-full p-5 flex justify-center items-center"><img src="./rock-paper-scissors-master/images/image-rules.svg" alt="Rules Image"></div>
+    </div>
+
+    <div id="title" class="bg-blue-900 absolute top-[40px] rounded-xl h-[20vh] w-[50vw] border-2 border-solid border-white flex flex-row">
+        <div id="gameTitle" class="m-5 text-2xl font-bold text-white w-fit h-full flex flex-col">
+            <div class="h-fit w-fit">ROCK</div>
+            <div class="h-fit w-fit">PAPER</div>
+            <div class="h-fit w-fit">SCISSORS</div>
+        </div>
+        <div id="gamePoints" class="bg-white flex flex-col h-[15vh] w-[10vw] rounded-md absolute right-5 top-4 justify-center items-center">
+            <div id="pointsTitle" class="font-bold text-2xl tracking-wider text-blue-800">SCORE</div>
+            <div id="pointsValue" class="font-bold text-5xl tracking-widest text-slate-600">0</div>
+        </div>
+    </div>
+
+    <div id="playArea" class="w-[50vw] h-[50vh] relative top-[60px]  rounded-md flex justify-center items-center">
+        <img src="./rock-paper-scissors-master/images/bg-triangle.svg" alt="">
+        <div id="rock" class="choice hover:cursor-pointer absolute top-[10px] left-[200px] p-3 w-[110px] h-[110px] bg-rose-600 rounded-full">
+            <div id="rockInside" class="h-full w-full rounded-full flex justify-center items-center bg-white">
+                <img src="./rock-paper-scissors-master/images/icon-rock.svg" alt="">
+            </div>
+        </div>
+
+        <div id="paper" class="choice hover:cursor-pointer absolute top-[10px] right-[200px] p-3 w-[110px] h-[110px] bg-blue-600 rounded-full">
+            <div id="paperInside" class="h-full w-full rounded-full flex justify-center items-center bg-white">
+                <img src="./rock-paper-scissors-master/images/icon-paper.svg" alt="">
+            </div>
+        </div>
+
+        <div id="scissors" class="choice hover:cursor-pointer absolute top-[230px] p-3 w-[110px] h-[110px] bg-yellow-500 rounded-full">
+            <div id="scissorsInside" class="h-full w-full rounded-full flex justify-center items-center bg-white">
+                <img src="./rock-paper-scissors-master/images/icon-scissors.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div id="result" class="w-[50vw] h-[50vh] relative top-[60px]  rounded-md flex flex-row justify-center items-center">
+        <div id="user" class="text-white h-full w-[40%] flex flex-col justify-center items-center">
+        
+            <h2 class="absolute top-5 text-xl text-slate-500 font-bold">Your Choice</h2>
+
+            <div id="userChoiceOut" class="hover:cursor-pointer absolute  p-3 w-[110px] h-[110px] rounded-full">
+                <div id="userChoiceIn" class="h-full w-full rounded-full flex justify-center items-center bg-white">
+                    <img src="" alt="" id="userImage">
+                </div>
+            </div>
+        </div>
+
+
+        <div id="resultMessageBox" class="hidden flex-col p-5 justify-center items-center">
+            <h2 class="text-2xl font-bold text-white mb-5" id="resultMessage"></h2>
+            <button id="playAgain" class="text-rose-500 rounded-xl tracking-wide text-md bg-white w-[10vw] h-[5vh]">Play Again</button>
+        </div>
+
+        <div id="robot" class=" text-white h-full w-[40%] flex flex-col justify-center items-center">
+            <h2 class="absolute top-5 text-xl text-slate-500 font-bold">Robot's Choice</h2>
+
+            <div id="robotChoiceOut" class="hover:cursor-pointer absolute  p-3 w-[110px] h-[110px]  rounded-full">
+                <div id="robotChoiceIn" class="h-full w-full rounded-full flex justify-center items-center bg-white">
+                    <img src="" alt="" id="robotImage">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <button id="rulesBtn" class="absolute bottom-[15px] right-[15px] font-bold tracking-widest text-white border-solid border-white border-2 w-[120px] h-[40px] rounded-xl">RULES</button>
+</body>
+</html>
